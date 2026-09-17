@@ -13,7 +13,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableIntStateOf // prompted
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -21,6 +21,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlin.random.Random
 import androidx.compose.ui.unit.sp
+
+// ChatGPT prompt: How do I record the amount of clicks, and have it increase every time I click the buttons?
+// Every line added/suggested by it is labeled as "prompted" 
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,9 +48,9 @@ fun DecisionApp() {
         )
     )
 
-    var clicks by remember {mutableIntStateOf(0)}
+    var clicks by remember {mutableIntStateOf(0)} // prompted
 
-    fun choice (probabilityOfYes: Int) {
+    fun choice (probabilityOfYes: Int) { // prompted
         clicks++
 
         val randomNumber = Random.nextInt(100)
