@@ -39,6 +39,20 @@ class MainActivity : ComponentActivity() {
 fun DecisionApp() {
     var answer by remember { mutableStateOf("Should we go?") }
 
+    Text(text = "ID number: 1851115",
+        fontSize = 20.sp,
+        modifier = Modifier.padding(
+         vertical = 30.dp
+        )
+    )
+    Text(text = "ccid: leezeped",
+        fontSize = 21.sp,
+        modifier = Modifier.padding(
+            vertical = 55.dp
+        )
+    )
+
+
     Text(
         text = answer,
         fontSize = 30.sp,
